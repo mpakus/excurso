@@ -1,0 +1,9 @@
+@import "../vendor/bootstrap-variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// turbolinks progressbar
+$nprogress-color: #9BFF64;
+@import 'nprogress';
+@import 'nprogress-bootstrap';
+#nprogress .bar { height: 4px !important; }

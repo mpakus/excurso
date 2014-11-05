@@ -1,0 +1,25 @@
+.tours{
+  a.city{
+    color: #1CE;
+    text-decoration: underline;
+  }
+  ul.tours{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      width: 19%;
+      margin-right: 5px;
+      height: 100px;
+//      border: 1px solid red;
+      float: left;
+      display: block;
+      div{
+        padding: 5px;
+      }
+      .categories{
+        margin-top: 1em;
+      }
+    }
+  }
+}
