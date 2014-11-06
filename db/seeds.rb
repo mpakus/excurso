@@ -10,6 +10,14 @@ require 'faker'
 
 srand()
 
+# users
+User.destroy_all
+User.create([
+  {email: 'admin@excurso.in', password: '100500'},
+  {email: 'adam@excurso.in',  password: '100500'},
+  {email: 'eva@excurso.in',   password: '100500'}
+])
+
 # cleanup cities and create random cities
 City.destroy_all
 cities = []

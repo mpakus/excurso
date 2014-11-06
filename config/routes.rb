@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     get :city, :category, on: :member
     get :categories,      on: :collection
   end
+  devise_for :users
 
 end
