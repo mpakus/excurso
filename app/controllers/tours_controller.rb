@@ -10,6 +10,7 @@ class ToursController < ApplicationController
   # Full information about tour
   def show
     @tour = Tour.find(params[:id])
+    trace_last
   end
 
   ##
@@ -30,4 +31,9 @@ class ToursController < ApplicationController
     @categories = Category
   end
 
+  protected
+    def trace_last
+      @trace ||= Trace.new(cookies, 3)
+      @trace.add(@tour.id)
+    end
 end
