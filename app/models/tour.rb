@@ -1,5 +1,6 @@
 class Tour < ActiveRecord::Base
   include Stateable
+  include Sortable
 
   validates_presence_of :name
   validates_presence_of :city
@@ -13,9 +14,9 @@ class Tour < ActiveRecord::Base
   # kaminari pagination
   paginates_per 20
 
-  scope :newest,       ->{ order('created_at DESC') }
-  scope :alphabetical, ->{ order('name ASC') }
-  scope :published,    ->{ where(state: Tour.states[:published]) }
+  def self.find_draft
+    self.where(state: Tour.states[:draft]).first
+  end
 
   protected
 

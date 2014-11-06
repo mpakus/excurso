@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   # backend
   get 'admin' => redirect('admin/tours')
   namespace :admin do
-    resources :tours
+    resources :tours, except: [:show]
   end
 
   # manager cabinets
+  get 'cabinet' => redirect('cabinet/tours')
   namespace :cabinet do
-    resources :tours
+    resources :tours, only: [:index, :update]
   end
 
   # front

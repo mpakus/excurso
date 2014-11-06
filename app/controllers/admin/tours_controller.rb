@@ -45,6 +45,6 @@ class Admin::ToursController < Admin::ApplicationController
     end
 
     def tour_params
-      params.require(:tour).permit(:name, :description, :state, :city_id)
+      params.require(:tour).permit(:name, :description, :city_id)
     end
 end

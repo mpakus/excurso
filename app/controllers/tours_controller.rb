@@ -41,6 +41,6 @@ class ToursController < ApplicationController
     def find_traces
       traces = @trace.values
       traces.delete(@tour.id)
-      @traced_tours = Tour.find(traces)
+      @traced_tours = Tour.where(id: traces)
     end
 end

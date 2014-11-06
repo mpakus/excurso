@@ -1,13 +1,13 @@
 ##
 # Lib works with hash container and support fifo rule over it
 class Trace
-  attr_reader :values
+  # attr_reader :values
 
   def initialize(container = '', limit = 3)
     @container = container
     @limit     = limit
     # container[:key] should be array
-    @values    = container[:last]
+    @values    = container[:last].clone
     @values    = [] if @values.blank?
     if values.is_a? String
       @values = values.split('&').map{ |x| x.to_i }
@@ -21,4 +21,9 @@ class Trace
       @container[:last] = @values
     end
   end
+
+  def values
+    @values.dup
+  end
+
 end

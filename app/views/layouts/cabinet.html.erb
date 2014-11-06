@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Excurso.admin</title>
+  <title>Excurso.cabinet</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'cabinet', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -23,11 +23,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/admin">Excurs<span>o</span>.admin</a>
+        <a class="navbar-brand" href="/">Excurs<span>o</span>.cabinet</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><%= link_to 'Tours', admin_tours_path %></li>
+          <li><%= link_to 'Tours', cabinet_tours_path %></li>
         </ul>
         <%= render 'inc/current_user' %>
       </div>
