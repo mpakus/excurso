@@ -49,6 +49,7 @@ gem 'nprogress-rails' # progressbar for turbolinks
 gem 'autoprefixer-rails' # css prefixer
 gem 'metamagic' # meta keywords and description
 gem 'paper_trail', '~> 3.0.6' # to trace who & what changed in tours
+gem "faker" # make fake data
 
 group :development do
   # gem 'mina'
@@ -72,7 +73,6 @@ end
 group :test, :development do
   gem "rspec-rails", "~> 3.0"
   gem "factory_girl_rails", "~> 4.0"
-  gem "faker"
   gem "capybara"
   # gem 'capybara-screenshot'
   gem "database_cleaner"
