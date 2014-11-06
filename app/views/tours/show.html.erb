@@ -7,8 +7,12 @@
     <% end %>
   </div>
 </div>
-<div class="row">
-  <div class="col-lg-12">
-    <% render partial: 'tours/list', locals: {tours: @traced_tours} %>
+
+<% if @traced_tours %>
+  <h3>Last visited</h3>
+  <div class="row tours">
+    <div class="col-lg-12">
+      <%= render partial: 'list', locals: {tours: @traced_tours} %>
+    </div>
   </div>
-</div>
+<% end %>

@@ -11,6 +11,7 @@ class ToursController < ApplicationController
   def show
     @tour = Tour.find(params[:id])
     trace_last
+    find_traces
   end
 
   ##
@@ -35,5 +36,11 @@ class ToursController < ApplicationController
     def trace_last
       @trace ||= Trace.new(cookies, 3)
       @trace.add(@tour.id)
+    end
+
+    def find_traces
+      traces = @trace.values
+      traces.delete(@tour.id)
+      @traced_tours = Tour.find(traces)
     end
 end
