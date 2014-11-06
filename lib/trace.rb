@@ -7,7 +7,7 @@ class Trace
     @container = container
     @limit     = limit
     # container[:key] should be array
-    @values    = container[:last].clone
+    @values    = container[:last]
     @values    = [] if @values.blank?
     if values.is_a? String
       @values = values.split('&').map{ |x| x.to_i }
