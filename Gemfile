@@ -51,13 +51,17 @@ gem 'metamagic' # meta keywords and description
 gem 'paper_trail', '~> 3.0.6' # to trace who & what changed in tours
 
 group :development do
-  gem 'mina'
+  # gem 'mina'
   gem 'net-ssh', "~> 2.7.0"
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'sextant'
   gem 'quiet_assets'
   gem 'bullet'
+
+  gem 'capistrano', '~> 2'
+  gem 'rvm-capistrano'
+  gem 'sshkit'
 end
 
 group :production do
