@@ -13,8 +13,9 @@ class Tour < ActiveRecord::Base
   # kaminari pagination
   paginates_per 20
 
-  scope :newest,    ->{ order('created_at DESC') }
-  scope :published, ->{ where(state: 5) }
+  scope :newest,       ->{ order('created_at DESC') }
+  scope :alphabetical, ->{ order('name ASC') }
+  scope :published,    ->{ where(state: Tour.states[:published]) }
 
   protected
 

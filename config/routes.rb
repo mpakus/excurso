@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   root 'tours#index'
   resources :tours, only: [:index, :show] do
     get :city, :category, on: :member
+    get :categories,      on: :collection
   end
 
 end

@@ -15,11 +15,19 @@ class ToursController < ApplicationController
   ##
   # List of tours filtered by city
   def city
+    @city  = City.find(params[:id])
   end
 
   ##
   # List of tours filtered by category
   def category
+    @category = Category.find(params[:id])
+  end
+
+  ##
+  # Shows list of categories
+  def categories
+    @categories = Category
   end
 
 end

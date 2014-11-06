@@ -1,0 +1,9 @@
+<h1>City: <%= @city.name %></h1>
+
+<div class="tours">
+  <div class="row">
+    <div class="col-lg-12">
+      <%= render partial: 'list', locals: {tours: @city.tours.published.alphabetical} %>
+    </div>
+  </div>
+</div>

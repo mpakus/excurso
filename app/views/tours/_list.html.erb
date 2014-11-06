@@ -1,0 +1,24 @@
+<% cache tours do %>
+<ul class="tours">
+  <% tours.each do |tour| %>
+    <li>
+      <div>
+        <strong><%= link_to tour.name, tour %></strong>
+
+        <% unless local_assigns[:hide_categories] %>
+          <div class="categories">
+            <% tour.categories.each do |category| %>
+              <%= link_to category.name, category_tour_path(category), class: 'label label-success' %>
+            <% end  %>
+          </div>
+        <% else %>
+          <div class="city">
+            <%= link_to tour.city.name, city_tour_path(tour.city), class: 'label label-danger' %>
+          </div>
+        <% end %>
+
+      </div>
+    </li>
+  <% end %>
+</ul>
+<% end %>
