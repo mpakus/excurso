@@ -33,3 +33,5 @@ bower.json
 
 config/database.yml
 config/secrets.yml
+config/deploy.rb
+config/unicorn.rb
