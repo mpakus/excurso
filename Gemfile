@@ -38,8 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'devise'   # authorization
+gem 'devise'   # authentication
 gem 'devise-bootstrap-views' # bootstrap views for devise
+gem 'cancancan', '~> 1.9' # authorization
 gem 'russian' # russian lang
 gem 'kaminari' # paginations
 gem 'airbrake' # errbit notifications

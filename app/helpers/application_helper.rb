@@ -7,7 +7,7 @@ module ApplicationHelper
     flash.each do |name, msg|
       if msg.is_a?(String) && !msg.blank? && !name.blank?
         out << %Q{
-          <div class="alert alert-#{name.to_sym == :notice ? "success" : "error"}">
+          <div class="alert alert-#{name.to_sym == :notice ? "success" : "danger"}">
             <a class="close" onClick="$(this).parent().fadeOut(300)">&times;</a>
             #{content_tag(:div, msg, :id => "flash_#{name}")}
           </div>

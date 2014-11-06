@@ -13,9 +13,9 @@ srand()
 # users
 User.destroy_all
 User.create([
-  {email: 'admin@excurso.in', password: '100500'},
-  {email: 'adam@excurso.in',  password: '100500'},
-  {email: 'eva@excurso.in',   password: '100500'}
+  {email: 'admin@excurso.in', password: '100500', role: :admin},
+  {email: 'adam@excurso.in',  password: '100500', role: :manager},
+  {email: 'eva@excurso.in',   password: '100500', role: :manager}
 ])
 
 # cleanup cities and create random cities
