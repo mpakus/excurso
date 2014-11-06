@@ -72,5 +72,6 @@ group :test, :development do
   gem "capybara"
   # gem 'capybara-screenshot'
   gem "database_cleaner"
+  gem "awesome_print"
 end
 
