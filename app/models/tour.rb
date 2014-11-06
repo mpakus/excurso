@@ -2,6 +2,8 @@ class Tour < ActiveRecord::Base
   include Stateable
   include Sortable
 
+  has_paper_trail
+
   validates_presence_of :name
   validates_presence_of :city
 

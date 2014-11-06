@@ -1,4 +1,4 @@
-<h1>Cabinet: Tours</h1>
+<h1>Cabinet: Tours #<%= @tour.id %></h1>
 
 <%= form_for([:cabinet, @tour], class: 'form-horizontal') do |f| %>
 
@@ -21,3 +21,5 @@
   </div>
 
 <% end %>
+
+<%= render 'inc/tour_changes', locals: {tour: @tour} %>

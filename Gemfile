@@ -48,6 +48,7 @@ gem 'bootstrap-sass', '~> 3.2.0' # bootstrap
 gem 'nprogress-rails' # progressbar for turbolinks
 gem 'autoprefixer-rails' # css prefixer
 gem 'metamagic' # meta keywords and description
+gem 'paper_trail', '~> 3.0.6' # to trace who & what changed in tours
 
 group :development do
   gem 'mina'
